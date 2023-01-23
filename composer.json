@@ -56,7 +56,11 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
+        "platform-check": false,
         "sort-packages": true,
+        "platform": {
+            "php": "7.1.0"
+         },
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
