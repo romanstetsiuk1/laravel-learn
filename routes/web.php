@@ -17,9 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('start_page', function(){
-    return 'Welcome to my first get request :)';
-});
+/*
+    In news wersion Laravel you can use this:
+*/
+Route::get('/start_page', [App\Http\Controllers\MyFirstController::class, 'index']);
+/*
+// or this:
+Route::get('/start_page', 'App\Http\Controllers\MyFirstController@index');
+*/
+
 
 Auth::routes();
 
