@@ -25,6 +25,7 @@ Route::get('/start_page', [App\Http\Controllers\MyFirstController::class, 'index
 // or this:
 Route::get('/start_page', 'App\Http\Controllers\MyFirstController@index');
 */
+Route::get('/posts', 'App\Http\Controllers\PostController@index');
 
 
 Auth::routes();
