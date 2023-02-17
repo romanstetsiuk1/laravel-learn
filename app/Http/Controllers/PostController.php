@@ -70,4 +70,18 @@ class PostController extends Controller
         dd('created');
     }
 
+    public function update(){
+        $post = Post::find(6);
+        #dd($post->title);
+
+        $post->update([
+            'title' => 'UPDATED_Ver2.0: My title to insert from creat()',
+            'content' => 'UPDATED_Ver2.0: Test target: insert some content from code',
+            'image' => 'UPDATED_Ver2.0: image12.jpeg',
+            'likes' => 21,
+            'is_published' => 1
+        ]);
+        DD('UPDATED');
+    }
+
 }
