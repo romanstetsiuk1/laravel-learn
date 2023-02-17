@@ -11,4 +11,5 @@ class Post extends Model
 
     protected $table = 'posts';
     public $someProperty;
+    protected $guarded = [];        #Lub można zapisać: protected $guarded = false;
 }

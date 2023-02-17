@@ -33,6 +33,35 @@ class PostController extends Controller
             dump($post->title);
         }
         dd('Koniec programu :)');
-        
     }
+
+    public function create(){
+        $postsArr = [
+            [
+                'title' => 'My title to insert from creat()',
+                'content' => 'Test target: insert some content from code',
+                'image' => 'image12.jpeg',
+                'likes' => 123,
+                'is_published' => 1
+            ],
+            [
+                'title' => 'Ver2.0: My title to insert from creat()',
+                'content' => 'Ver2.0: Test target: insert some content from code',
+                'image' => 'Ver2.0: image12.jpeg',
+                'likes' => 223,
+                'is_published' => 1
+            ]
+        ];
+
+        Post::create([
+            'title' => 'Ver2.0: My title to insert from creat()',
+            'content' => 'Ver2.0: Test target: insert some content from code',
+            'image' => 'Ver2.0: image12.jpeg',
+            'likes' => 223,
+            'is_published' => 1
+        ]);
+
+        dd('created');
+    }
+
 }
