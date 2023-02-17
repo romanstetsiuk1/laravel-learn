@@ -53,6 +53,11 @@ class PostController extends Controller
             ]
         ];
 
+        foreach ($postsArr as $item){
+            Post::create($item);
+        }
+
+        /*
         Post::create([
             'title' => 'Ver2.0: My title to insert from creat()',
             'content' => 'Ver2.0: Test target: insert some content from code',
@@ -60,6 +65,7 @@ class PostController extends Controller
             'likes' => 223,
             'is_published' => 1
         ]);
+        */
 
         dd('created');
     }
