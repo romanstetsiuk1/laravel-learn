@@ -121,6 +121,22 @@ class PostController extends Controller
     }
 
     # updateOrCreate
+    public function updateOrCreate(){
+        $anotherPost = [
+            'title' => 'anotherPost.updateOrCreate_var.title',
+            'content' => 'anotherPost.updateOrCreate_var.content',
+            'image' => 'anotherPost.updateOrCreate_var.image12.jpeg',
+            'likes' => 201,
+            'is_published' => 1
+        ];
+
+        $post = Post::updateOrCreate([
+            'title' => 'My title to insert from creat()'
+        ],$anotherPost);
+        dump($post->content);
+
+        dd('updateOrCreate');
+    }
 
 
 
