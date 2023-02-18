@@ -85,9 +85,15 @@ class PostController extends Controller
     }
 
     public function delete(){
-        $post = Post::find(6);
-        $post->delete();        #Taki typ usuwania jest - nie załecany. Załecane usuwanie rekordów z możliwością ich przewrucenia.
-        dd('deleted');
+        /*#Usuwanie rekordu:
+        $post = Post::find(4);
+        $post->delete();        #Taki typ usuwania jest - nie załecany. Załecane usuwanie rekordów z możliwością ich przewrucenia -> SoftDelete
+        */
+
+        #Restore rekordu:
+        $post = Post::withTrashed()->find(4);
+        $post->restore();
+        dd('restored');
     }
 
 }
