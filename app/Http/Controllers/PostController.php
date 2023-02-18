@@ -96,4 +96,32 @@ class PostController extends Controller
         dd('restored');
     }
 
+    # firstOrCreate
+    public function firstOrCreate(){
+        $anotherPost = [
+            'title' => 'anotherPost_var.title',
+            'content' => 'anotherPost_var.content',
+            'image' => 'anotherPost_var.image12.jpeg',
+            'likes' => 2201,
+            'is_published' => 1
+        ];
+
+        $post = Post::firstOrCreate([
+            'title' => 'My title to insert from creat()'
+        ],[
+            'title' => 'anotherPost_var.title',
+            'content' => 'anotherPost_var.content',
+            'image' => 'anotherPost_var.image12.jpeg',
+            'likes' => 2201,
+            'is_published' => 1
+        ]);
+        dump($post->content);
+
+        dd('finished');
+    }
+
+    # updateOrCreate
+
+
+
 }
