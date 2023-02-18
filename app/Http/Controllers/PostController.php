@@ -84,4 +84,10 @@ class PostController extends Controller
         DD('UPDATED');
     }
 
+    public function delete(){
+        $post = Post::find(6);
+        $post->delete();        #Taki typ usuwania jest - nie załecany. Załecane usuwanie rekordów z możliwością ich przewrucenia.
+        dd('deleted');
+    }
+
 }
