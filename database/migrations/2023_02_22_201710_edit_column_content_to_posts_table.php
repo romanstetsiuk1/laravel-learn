@@ -10,29 +10,30 @@ use Illuminate\Support\Facades\Schema;
  * 
  * Dla tej funkcji trzeba doinstalować przy pomocy composera 'doctrine/dbal'
  */
-return new class extends Migration
-{
+
+#return new class extends Migration
+#{
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->renameColumn('content','post_content');
-        });
-    }
+#    public function up()
+#    {
+#        Schema::table('posts', function (Blueprint $table) {
+#            $table->renameColumn('content','post_content');
+#        });
+#    }
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->renameColumn('post_content','content');
-        });
-    }
-};
+#    public function down()
+#    {
+#        Schema::table('posts', function (Blueprint $table) {
+#            $table->renameColumn('post_content','content');
+#        });
+#    }
+#};
